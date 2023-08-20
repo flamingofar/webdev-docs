@@ -11,7 +11,14 @@ const config: DocsThemeConfig = {
 	footer: {
 		text: "Made by Malte Skjoldager and Nextra with ❤️",
 	},
-	editLink: { text: "Edit this page on hej" },
+	head: function head() {
+		return (
+			<>
+				<meta name="og:title" content={"WebDev 2.Sem"} />
+				<title>WebDev Docs</title>
+			</>
+		);
+	},
 };
 
 export default config;
