@@ -1,11 +1,15 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+import { Cards, Card } from "nextra/components";
+import DevOpsIcon from "../components/icons/DevOpsIcon";
+import FullstackIcon from "../components/icons/FullstackIcon";
+import CLIicon from "../components/icons/CLIicon";
 
-## What is Nextra?
+# Velkommen
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+Velkommen til til WebDev 2. Semester noter. Her kan du finde noter på alle valgfag og obligatoriske fag.
 
-## Documentation
+<Cards >
+  <Card icon={<DevOpsIcon fill="light"/>} title="DevOps" href="/DevOps" />
+  <Card icon={<FullstackIcon fill="light"/>} title="Fullstack Development" href="/Fullstack" />
+  <Card icon={<CLIicon fill="light"/>} title="Udviklingsmiljøer" href="/DevOps" />
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+</Cards>
