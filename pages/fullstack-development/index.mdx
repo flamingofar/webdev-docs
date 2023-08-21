@@ -1,4 +1,6 @@
 import { Callout } from "nextra/components";
+import { Cards, Card } from "nextra/components";
+import FronterIcon from "@/components/icons/FronterIcon";
 
 <Callout type="info" emoji="ℹ️">
 	Her vil du finde nyttige information
@@ -7,9 +9,42 @@ import { Callout } from "nextra/components";
 
 ## Links
 
-- [Fronter](https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=6062&LocationType=1)
-- [Sharepoint](https://studkea-my.sharepoint.com/:f:/g/personal/tomp_kea_dk/Ei9JdlYE1MlBgEt94Wylg_YB8DoWhdxrmA8gzQHvVWeMtQ?e=zuU8uq)
-- [Mandatories](https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project%2FMandatoryProjectsInfo%2Epdf&parent=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project)
-- [Final Project](https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project%2FFinal%20project%20description%2Epdf&parent=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project)
-- [Group Sheet](https://studkea-my.sharepoint.com/:x:/r/personal/tomp_kea_dk/_layouts/15/Doc.aspx?sourcedoc=%7B4E316711-7355-4EB0-A163-8746D10FF2EC%7D&file=Project%20Groups%20-%20Full%20Stack%20Web%20Development.xlsx&action=default&mobileredirect=true)
-- [Lectures](https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FLectures)
+<Cards>
+	<Card
+		title="Fronter"
+		href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=6062&LocationType=1"
+		arrow={true}
+		target="_blank"
+		icon={<FronterIcon />}
+	/>
+	<Card
+		title="Sharepoint"
+		href="https://studkea-my.sharepoint.com/:f:/g/personal/tomp_kea_dk/Ei9JdlYE1MlBgEt94Wylg_YB8DoWhdxrmA8gzQHvVWeMtQ?e=zuU8uq"
+		arrow={true}
+		target="_blank"
+	/>
+	<Card
+		title="Mandatories"
+		href="https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project%2FMandatoryProjectsInfo%2Epdf&parent=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project"
+		arrow={true}
+		target="_blank"
+	/>
+	<Card
+		title="Final Project"
+		href="https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project%2FFinal%20project%20description%2Epdf&parent=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FMandatory%20assignments%201%2C2%2C%20final%20project"
+		arrow={true}
+		target="_blank"
+	/>
+	<Card
+		title="Group Sheet"
+		href="https://studkea-my.sharepoint.com/:x:/r/personal/tomp_kea_dk/_layouts/15/Doc.aspx?sourcedoc=%7B4E316711-7355-4EB0-A163-8746D10FF2EC%7D&file=Project%20Groups%20-%20Full%20Stack%20Web%20Development.xlsx&action=default&mobileredirect=true"
+		arrow={true}
+		target="_blank"
+	/>
+	<Card
+		title="Lectures"
+		href="https://studkea-my.sharepoint.com/personal/tomp_kea_dk/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Ftomp%5Fkea%5Fdk%2FDocuments%2F2023%5FFall%2FFullstack%5F2023%5FFall%2FLectures"
+		arrow={true}
+		target="_blank"
+	/>
+</Cards>

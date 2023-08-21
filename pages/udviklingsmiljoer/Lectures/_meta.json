@@ -1,0 +1,19 @@
+{
+	"introduction": "Introduction",
+	"up_and_running": "Up and Running",
+	"unix": "Unix",
+	"requirement_specification": "Requirement Specifications",
+	"kms": "Knowledge Management Systems",
+	"version_control_systems": "Version Control Systems",
+	"virtualization_and_process_isolation_one": "Virtualization and Process Isolation Part I",
+	"virtualization_and_process_isolation_two": "Virtualization and Process Isolation Part II",
+	"docker": "Workshop: Dockerize your App",
+	"software_qa": "Software Quality Assurance",
+	"ci": "Continuous Integration",
+	"workshop_ci": "Workshop: Continuous Integration",
+	"programming_languages": "Programming Languages",
+	"database_systems": "Database Systems",
+	"block_and_object_storage": "Block and Object Storage",
+	"dns_and_certificates": "DNS and Certificates",
+	"cd": "Continuous Delivery"
+}

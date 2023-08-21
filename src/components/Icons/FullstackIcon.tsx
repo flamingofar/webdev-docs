@@ -1,6 +1,7 @@
 import React from "react";
+import { iconTypes } from "../../types";
 
-const FullstackIcon = ({ fill, size = 24 }: { fill: "light" | "dark"; size?: number }) => {
+const FullstackIcon = ({ fill, size = 24 }: iconTypes) => {
 	return (
 		<svg
 			width={`${size}px`}

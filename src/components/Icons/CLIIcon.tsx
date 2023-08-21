@@ -1,6 +1,6 @@
 import React from "react";
-
-const CLIIcon = ({ fill, size = 24 }: { fill: "light" | "dark"; size?: number }) => {
+import { iconTypes } from "../../types";
+const CLIIcon = ({ fill, size = 24 }: iconTypes) => {
 	return (
 		<svg
 			width={`${size}px`}
