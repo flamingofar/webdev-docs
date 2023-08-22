@@ -1,15 +1,37 @@
 import { Callout } from "nextra/components";
 import { Cards, Card } from "nextra/components";
+import FronterIcon from "@/components/Icons/FronterIcon";
+import GitLabIcon from "@/components/Icons/GitLabIcon";
 
 <Callout type="info" emoji="ℹ️">
 	Her vil du finde nyttige information
 </Callout>
-# DevOps
+# DevOps with Linux, Python & Django
 
 <Cards>
 	<Card
 		title="Fronter"
-		href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=6062&LocationType=1"
+		href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=6060&LocationType=1"
+		arrow={true}
+		target="_blank"
+		icon={<FronterIcon/>}
+	/>
+	<Card
+		title="Course Repository"
+		href="https://gitlab.com/keaorg/kea-devops-2023-2"
+		arrow={true}
+		target="_blank"
+		icon={<GitLabIcon/>}
+	/>
+	<Card
+		title="Course Materials Website"
+		href="https://keaorg.gitlab.io/kea-devops-2023-2/"
+		arrow={true}
+		target="_blank"
+	/>
+	<Card
+		title="Groups Sheets"
+		href="https://studkea.sharepoint.com/:x:/r/sites/TeamDevOpswithLinuxPythonDjangoFall2023/Shared%20Documents/General/devops.groups-sheet.xlsx?d=w2fcf416224d246dd81eea8e5e3f2f36e&csf=1&web=1&e=UJtR4S"
 		arrow={true}
 		target="_blank"
 	/>

@@ -7,5 +7,10 @@
 		"title": "Markdown Cheatsheet 🔗",
 		"href": "https://www.markdownguide.org/cheat-sheet/",
 		"newWindow": true
+	},
+	"nextra-docs": {
+		"title": "Nextra Docs 🔗",
+		"href": "https://nextra.site/docs",
+		"newWindow": true
 	}
 }
