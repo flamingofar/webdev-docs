@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
 		link: "https://github.com/flamingofar/webdev-docs",
 	},
 
-	docsRepositoryBase: "https://github.com/flamingofar/webdev-docs",
+	docsRepositoryBase: "https://github.com/flamingofar/webdev-docs/blob/main/",
 	footer: {
 		text: "Made by Malte Skjoldager and Nextra with ❤️",
 	},
