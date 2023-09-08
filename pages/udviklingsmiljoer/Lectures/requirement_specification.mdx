@@ -1,1 +1,99 @@
-# Requirement Specifications
+# Requirement Specifications [#python]
+
+## What is a Requirement Specification?
+
+A requirement specification is a document that records the required features and behaviors of a software system.
+
+There are several standards available for requirement specifications, e.g. [Software requirements specification IEEE 830](https://standards.ieee.org/standard/830-1998.html).
+This specification is a template for a requirement specification. Though, it is not necessary to use this standard if your project is not big enough.
+
+The requirement specification is the basis for the software design. The software design is the basis for the software implementation. The requirement specification is the basis of a contract
+
+## Types of Requirement Specifications
+
+- Business Requirement Specification
+
+  - The persons who are responsible for the project write down the requirements of the project.
+  - In a school project the business requirement specification is often written by the teacher.
+  - The business requirements comes from above. The business requirements are the basis for the user requirements, and we have no say in them.
+
+- User Requirement Specification
+
+  - The users can be the customers that will use the software, and admin that uses e.g. a content management system or customer relationship management system.
+
+- System Requirement Specification
+  - The system requirements are the requirements that the software must fulfill. the techinccal requirements.
+  - The system requirements are the basis for the software design.
+  - The system requirements are often written in a technical language, and the users are not able to understand them. Therefore, the system requirements must be translated into user requirements.
+  - It would normally be written in a table like document
+
+## Types of requirements
+
+- Functional requirements
+
+  - A function the system can deliver
+  - Example A "I can get an overview of my pension savings"
+  - Example "I need to get from A to B"
+
+- Non-functional requirements
+  - Example A "How fast can I get an overview of my pension savings"
+  - Example B "How fast can I get from A to B"
+  - To simplify requirements and to avoid redundancy, we often have non-functional requirements that refer to functional requirements.
+
+## Practical Use of Functional and Non-Functional Requirements
+
+## Requirement Prioritization
+
+You could prioritize as 1 2 3, but it could be misinterpreted as a priority. Therefore, we use [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method).
+
+- **Must have** <br />
+  Requirements labelled as Must have are critical to the current delivery timebox in order for it to be a success. If even one Must have requirement is not included, the project delivery should be considered a failure (note: requirements can be downgraded from Must have, by agreement with all relevant stakeholders; for example, when new requirements are deemed more important). MUST can also be considered an acronym for the Minimum Usable Subset.
+- **Should have** <br />
+  Requirements labelled as Should have are important but not necessary for delivery in the current delivery timebox. While Should have requirements can be as important as Must have, they are often not as time-critical or there may be another way to satisfy the requirement so that it can be held back until a future delivery timebox.
+  Could have
+  Requirements labelled as Could have are desirable but not necessary and could improve the user experience or customer satisfaction for a little development cost. These will typically be included if time and resources permit.
+- **Won't have** (this time) <br />
+  Requirements labelled as Won't have, have been agreed by stakeholders as the least-critical, lowest-payback items, or not appropriate at that time. As a result, Won't have requirements are not planned into the schedule for the next delivery timebox. Won't have requirements are either dropped or reconsidered for inclusion in a later timebox. (Note: occasionally the term Would like to have is used; however, that usage is incorrect, as this last priority is clearly stating something is outside the scope of delivery). (The BCS in edition 3 & 4 of the Business Analysis Book describe 'W' as 'Want to have but not this time around')
+
+When **_Must_** and **_Should_** has been implemented, the project is a success, and you could demand payment.
+
+## Scheduling
+
+Sheduling should not be in our requirements.
+It can provide a help to plan how to execute the work for the project, but it should not be in the requirements.
+
+## Requirement Specification As A Contract
+
+## Summary
+
+### Assignment 3a.1: Make a template for a requirement specification. Put some thought into what columns it should have.
+
+| Id       | Type    | MoSCoW  | Functional/Non-Functional | Title    | Ansvar   | Status        |
+| -------- | ------- | ------- | ------------------------- | -------- | -------- | ------------- |
+| `number` | `B/U/T` | M/S/C/W | F/NF                      | `string` | PM/DM/QA | Done/Not Done |
+
+- Type
+  - B = Business
+  - U = User
+  - T = Technical
+- MoSCoW
+  - M = Must
+  - S = Should
+  - C = Could
+  - W = Won't
+- Functional/Non-Functional
+  - F = Functional
+  - NF = Non-Functional
+- Ansvar
+  - PM = Project Manager
+  - DM = Development Manager
+  - QA = Quality Assurance
+
+### Example of a Requirement Specification
+
+| Id  | Type | MoSCoW | Functional/Non-Functional | Title                                 | Ansvar | Status  |
+| --- | ---- | ------ | ------------------------- | ------------------------------------- | ------ | ------- |
+| 1   | B    | C      | F                         | Tilpasning af identitet (Logo/farver) |        | Ongoing |
+| 2   | B    | S      | F                         | Indhente rapport af data              |        | Ongoing |
+| 3   | U    | M      | F                         | Studerende kan sætte sig i kø         |        | Ongoing |
+| 4   | S    | M      | F                         | Multi tenant                          |        | Ongoing |
