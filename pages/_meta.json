@@ -4,6 +4,11 @@
 	"udviklingsmiljoer": "Udviklingsmiljøer",
 	"devops": "DevOps",
 	"web-security": "Web Security",
+	"ohshitgit": {
+		"title": "OhShitGit 🔗",
+		"href": "https://ohshitgit.com/",
+		"newWindow": true
+	},
 	"md-link": {
 		"title": "Markdown Cheatsheet 🔗",
 		"href": "https://www.markdownguide.org/cheat-sheet/",

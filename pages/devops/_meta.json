@@ -1,5 +1,6 @@
 {
-  "index": "Introduktion",
-  "start-django": "Fire up py-env and Django",
-  "tailwind": "Add TailwindCSS to Django"
+	"index": "Introduktion",
+	"start-django": "Fire up py-env and Django",
+	"tailwind": "Add TailwindCSS to Django",
+	"mkgif": "MkGif Project"
 }
