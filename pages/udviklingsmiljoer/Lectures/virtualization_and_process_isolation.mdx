@@ -1,0 +1,24 @@
+# Virtialization and Process Isolation
+
+| Syntax | Description                                                             |
+| ------ | ----------------------------------------------------------------------- |
+| -d     | Run in detatched mode                                                   |
+| -p     | Port mapping. 3000:80, map port 3000 of the host to 80 in the container |
+
+## What is a container image?
+
+When running a container, it uses an isolated filesystem. This custom filesystem is provided by a container image. Since the image contains the container's filesystem, it must include everything needed to run the application - all dependencies, configuration, scripts, binaries, etc. The image also contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
+
+## What is a container?
+
+Now that you've successfully run a container, let's ask ourselves what is a container? Simply put, a container is another process on your machine that has been isolated from all other processes on the host machine. That isolation leverages kernel namespaces and cgroups, features that have been in Linux for a long time. Docker has worked to make these capabilities approachable and easy to use.
+
+## Container Volumes
+
+### Named Volumes
+
+As mentioned, we are going to use a named volume. Think of a named volume as simply a bucket of data. Docker maintains the physical location on the disk and you only need to remember the name of the volume. Every time you use the volume, Docker will make sure the correct data is provided.
+
+### Bind Mounts
+
+With **bind mounts**, we control the exact mountpoint on the host. We can use this to persist data, but is often used to provide additional data into containers. When working on an application, we can use a bind mount to mount our source code into the container to let it see code changes, respond, and let us see the changes right away.
