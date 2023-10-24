@@ -1,0 +1,17 @@
+# Misc. Notes
+
+## Alpine Linux
+
+When choosing Alpine you must know that it uses musl libc instead of glibc. This means that you will not be able to use binaries that are linked against glibc.
+
+It lacks build tools by default, so you will need to install them.
+
+It is the most lightweight of the three, but it is not as widely used as the other two.
+
+## bin/sh
+
+This points to the standard shell on the system. It is not always bash zsh or other.
+
+## Docker Notes
+
+When building your docker image we will use --pull to make sure we are using the latest version of the base image and use the cache if available, because Docker is not persisting the cache between builds.

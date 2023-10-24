@@ -5,6 +5,10 @@
 | -d     | Run in detatched mode                                                   |
 | -p     | Port mapping. 3000:80, map port 3000 of the host to 80 in the container |
 
+### Port mapping
+
+We would usually map port 80 in our container to e.g. port 8000 on our host machine. This is because port 80 is a privileged port and we need root access to use it. We don't want to run our container as root, so we map it to a non-privileged port in development. every port from 1024 and down are privileged ports.
+
 ## What is a container image?
 
 When running a container, it uses an isolated filesystem. This custom filesystem is provided by a container image. Since the image contains the container's filesystem, it must include everything needed to run the application - all dependencies, configuration, scripts, binaries, etc. The image also contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
@@ -22,3 +26,100 @@ As mentioned, we are going to use a named volume. Think of a named volume as sim
 ### Bind Mounts
 
 With **bind mounts**, we control the exact mountpoint on the host. We can use this to persist data, but is often used to provide additional data into containers. When working on an application, we can use a bind mount to mount our source code into the container to let it see code changes, respond, and let us see the changes right away.
+
+## Docker Compose
+
+### What is Docker Compose?
+
+Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.
+
+The great thing about Docker Composer is that it allows us to define our application's services and their relationships in a single file, then spin up all of those services with a single command. This avoids the need to define each service separately and remember the command to spin them up and the "It works on my machine" problem.
+
+### Docker Compose Commands
+
+| Syntax               | Description                                                                                                                       |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| docker-compose up    | Run one or more containers with their settings for network ports, volumes ( file systems), enviroment variables, start up or etc. |
+| docker-compose up -d | Run in the background                                                                                                             |
+| docker-compose down  | Bring down all the Docker containers                                                                                              |
+
+### Docker Compose File
+
+#### Simple file:
+
+```yaml
+version: "3"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+```
+
+#### More complex file:
+
+```yaml
+version: "3"
+
+services:
+  database1:
+    image: postgres:10
+    volumes:
+      - database1_volume:/var/lib/postgresql/data
+    env_file:
+      - config/db/database1_env
+    networks:
+      - database1_network
+
+  database2:
+    image: postgres:10
+    volumes:
+      - database2_volume:/var/lib/postgresql/data
+    env_file:
+      - config/db/database2_env
+    networks:
+      - database2_network
+
+  djangoapp:
+    build: .
+    environment:
+      - DJANGO_SETTINGS_MODULE
+    volumes:
+      - .:/opt/services/djangoapp/src
+      - static:/opt/services/djangoapp/static
+      - media:/opt/services/djangoapp/media
+    networks:
+      - database1_network
+      - database2_network
+      - nginx_network
+    depends_on:
+      - database1
+      - database2
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8000:80
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - static:/opt/services/djangoapp/static
+      - media:/opt/services/djangoapp/media
+    networks:
+      - nginx_network
+    depends_on:
+      - djangoapp
+
+networks:
+  database1_network:
+    driver: bridge
+  database2_network:
+    driver: bridge
+  nginx_network:
+    driver: bridge
+
+volumes:
+  database1_volume:
+  database2_volume:
+  static:
+  media:
+```
